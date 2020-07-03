@@ -1,0 +1,6 @@
+__pycache__
+venv
+.idea
+.cache
+.DS_Store
+.coverage
