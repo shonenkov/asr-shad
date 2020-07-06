@@ -4,3 +4,4 @@ venv
 .cache
 .DS_Store
 .coverage
+.ipynb_checkpoints
