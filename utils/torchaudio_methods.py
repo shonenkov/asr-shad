@@ -9,7 +9,6 @@ def draw_waveform(waveform, output_file=None):
     :param output_file: name of output image file without extension, in will automatically be .png.
     By default the plot is shown in the same window.
     """
-    plt.figure()
     plt.plot(waveform.t().numpy())
     if output_file is None:
         plt.show()
@@ -34,7 +33,6 @@ def draw_spectrogram(waveform, kind='spec', output_file=None):
     else:
         raise ValueError('Kind should be spec, melspec, mfcc or None')
 
-    plt.figure()
     plt.imshow(spectrogram.log2()[0, :, :].numpy(), cmap='nipy_spectral')
     if output_file is None:
         plt.show()

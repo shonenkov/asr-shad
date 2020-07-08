@@ -32,10 +32,7 @@ TEST_CASES = [
 
 @pytest.mark.parametrize('t', TEST_CASES, ids=str)
 def test_draw(t: Case) -> None:
-    draw_waveform(t.waveform)
     draw_waveform(t.waveform, t.output_file)
-    draw_spectrogram(t.waveform)
-    draw_spectrogram(t.waveform, kind=t.kind)
     draw_spectrogram(t.waveform, output_file=t.output_file)
     draw_spectrogram(t.waveform, t.kind, t.output_file)
 
