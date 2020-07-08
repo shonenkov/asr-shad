@@ -1,8 +1,6 @@
 import collections
 
-import sys
-sys.path.insert(0, '..')
-from utils.int_to_text import num2text
+from .int_to_text import num2text
 
 
 def get_word_pool(numbers): 
