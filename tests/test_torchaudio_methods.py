@@ -19,7 +19,7 @@ class Case:
         return 'draw_waveform'
 
 
-file = './jupyters/sample_data/sample.wav'
+file = './jupyters/sample_data/0a0e03cd54.wav'
 waveform, _ = torchaudio.load(file)
 
 
