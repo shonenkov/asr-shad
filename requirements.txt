@@ -2,3 +2,4 @@ torch==1.5.1
 torchaudio==0.5.1
 matplotlib==3.2.2
 pandas==1.0.5
+wordcloud==1.7.0
