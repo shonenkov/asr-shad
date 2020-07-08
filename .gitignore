@@ -6,3 +6,4 @@ venv
 .coverage
 .ipynb_checkpoints
 *.swp
+*.pyc
