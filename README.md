@@ -8,8 +8,6 @@
 here: https://github.com/shonenkov/asr-shad/tree/develop/jupyters/eda
 
 
-![](./jupyters/waveform.png)
+![](./jupyters/wordcloud.png)
 
-![](./jupyters/melspectrogram.png)
-
-![](./jupyters/mfcc.png)
+![](./jupyters/waveform.png) ![](./jupyters/melspectrogram.png)
