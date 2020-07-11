@@ -1,4 +1,3 @@
-import torch
 import torchaudio
 import os
 import pandas as pd
@@ -14,12 +13,12 @@ def get_audio_meta(filename):
     size_bytes = os.path.getsize(filename)
     return dict(
         filename=os.path.basename(filename),
-        channels=waveform.size()[0], 
+        channels=waveform.size()[0],
         frames=waveform.size()[1],
-        sample_rate_hz=sample_rate, 
+        sample_rate_hz=sample_rate,
         size_bytes=size_bytes,
-        duration_s=waveform.size()[1]/sample_rate,
-        bitrate=int(size_bytes*8/waveform.size()[1])
+        duration_s=waveform.size()[1] / sample_rate,
+        bitrate=int(size_bytes * 8 / waveform.size()[1])
     )
 
 

@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
-#@title Nums_to_text
-import decimal
+# @title Nums_to_text
 
 
 units = (
@@ -35,7 +34,7 @@ hundreds = (
     'девятьсот'
 )
 
-orders = (# plural forms
+orders = (  # plural forms
     (('тысяча', 'тысячи', 'тысяч'), 'f'),
     (('миллион', 'миллиона', 'миллионов'), 'm'),
     (('миллиард', 'миллиарда', 'миллиардов'), 'm'),
@@ -74,14 +73,14 @@ def thousand(rest, sex):
             else:
                 plural = 2
         else:
-            name.append(names[cur-1])
+            name.append(names[cur - 1])
     return plural, name
 
 
-def num2text(num, main_units=(('', '', ''), 'm')):  
+def num2text(num, main_units=(('', '', ''), 'm')):
     _orders = (main_units,) + orders
     if num == 0:
-        return ' '.join((units[0], _orders[0][0][2])).strip() # ноль
+        return ' '.join((units[0], _orders[0][0][2])).strip()  # ноль
 
     rest = abs(num)
     ord = 0

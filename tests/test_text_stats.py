@@ -1,6 +1,10 @@
 import pytest
 
-from utils.text_stats import get_word_counter, get_digit_counter, get_digitcnt_counter, get_char_counter, get_wordcnt_counter
+from utils.text_stats import get_word_counter,\
+    get_digit_counter,\
+    get_digitcnt_counter,\
+    get_char_counter,\
+    get_wordcnt_counter
 
 
 TEST_CASES_WORD = [
@@ -32,7 +36,6 @@ TEST_CASES_DIGITCNT = [
     {'input': [1, 2, 3, 41, 33], 'feature': 2, 'result': 2},
     {'input': [1, 2, 3, 41, 33], 'feature': 3, 'result': 0},
 ]
-
 
 
 @pytest.mark.text_stats
