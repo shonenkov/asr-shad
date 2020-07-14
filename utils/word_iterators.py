@@ -52,9 +52,15 @@ def word_feature_iterator(resources_path, df):
             ww_iter = word_wave_iterator(filename, row.num_words)
             for word in row.text.split(' '):
                 word_wave = next(ww_iter)
-                yield word, word_wave, MFCC()(word_wave).log2(), row.gender
+                mfcc = MFCC()(word_wave).log2()
+                # replace nans with zeros
+                mfcc[mfcc != mfcc] = 0
+                yield word, word_wave, mfcc, row.gender
         else:
             # test
             ww_iter = word_wave_iterator(filename)
             for word_wave in ww_iter:
-                yield None, word_wave, MFCC()(word_wave).log2(), None
+                mfcc = MFCC()(word_wave).log2()
+                # replace nans with zeros
+                mfcc[mfcc != mfcc] = 0
+                yield None, word_wave, mfcc, None
